@@ -28,6 +28,10 @@ func main() {
 	util.RenderMath(str, "hydrogen-radial.html")
 }
 
+var (
+	one = big.NewInt(1)
+)
+
 // Latex formula for R_{ln}(r).
 func formula(n, l int) string {
 	p := constructPoly(n, l)
@@ -51,18 +55,39 @@ func formula(n, l int) string {
 	if l > 1 {
 		lTerm += fmt.Sprintf("^{%v}", l)
 	}
-	rnum := ""
-	if r.Num().Cmp(big.NewInt(1)) != 0 {
-		rnum = r.Num().String()
+
+	rootTerm := ""
+	if in.Cmp(one) > 0 {
+		rootTerm = fmt.Sprintf("\\sqrt{%v}", in)
+	}
+	overallUp := ""
+	if r.Num().Cmp(one) == 0 {
+		if rootTerm == "" {
+			overallUp = "1"
+		} else {
+			overallUp = rootTerm
+		}
+	} else {
+		overallUp = r.Num().String() + rootTerm
+	}
+	overall := ""
+	if r.Denom().Cmp(one) == 0 {
+		overall = overallUp
+	} else {
+		overall = fmt.Sprintf("\\frac{%v}{%v}", overallUp, r.Denom())
+	}
+	expTerm := ""
+	if n == 1 {
+		expTerm = "e^{-Zr/a_0}"
+	} else {
+		expTerm = fmt.Sprintf("e^{-Zr/%va_0}", n)
 	}
 	str := fmt.Sprintf(
-		"R_{n=%v,l=%v}(r)&=\\frac{%v\\sqrt{%v}}{%v}\\left(\\frac{Z}{a_0}\\right)^{3/2}%ve^{-Zr/%va_0}%v",
+		"R_{n=%v,l=%v}(r)&=%v\\left(\\frac{Z}{a_0}\\right)^{3/2}%v%v%v",
 		n, l,
-		rnum,
-		in,
-		r.Denom(),
+		overall,
 		lTerm,
-		n,
+		expTerm,
 		p,
 	)
 	return str
