@@ -1,0 +1,16 @@
+{
+  "cameraTheta": 90,
+  "cameraPhi": 0,
+  "imageSize": 1000,
+  "fovSize": 25,
+  "layerDist": 3,
+  "layers": 1,
+  "concurrency": 200,
+  "floatPrec": 100,
+  "heatmapFile": "./heatmaps/wikipedia.png",
+  "outputFile": "./outputs/2-0-0.png",
+  "exposure": 2.5,
+  "n": 2,
+  "l": 0,
+  "m": 0
+}
