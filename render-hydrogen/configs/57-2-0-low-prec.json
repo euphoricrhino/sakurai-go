@@ -6,11 +6,11 @@
   "layerDist": 3,
   "layers": 1,
   "concurrency": 200,
-  "floatPrec": 100,
+  "floatPrec": 53,
   "heatmapFile": "./heatmaps/wikipedia.png",
-  "outputFile": "./outputs/57-43-5.png",
-  "exposure": 2.5,
+  "outputFile": "./outputs/57-2-0-low-prec.png",
+  "exposure": 3.5,
   "n": 57,
-  "l": 43,
-  "m": 5
+  "l": 2,
+  "m": 0
 }

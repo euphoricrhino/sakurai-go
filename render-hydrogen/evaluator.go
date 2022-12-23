@@ -101,7 +101,7 @@ func angular(l, m int) *polynomial {
 	}
 	for k := len(pl.coeff) - 1; k >= m; k -= 2 {
 		poly.coeff[k-m] = blankFloat().Set(pl.coeff[k])
-		for j := 0; j < m-1; j++ {
+		for j := 0; j < m; j++ {
 			poly.coeff[k-m].Mul(poly.coeff[k-m], newFromInt(k-j))
 		}
 	}

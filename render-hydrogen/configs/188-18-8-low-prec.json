@@ -2,15 +2,15 @@
   "cameraTheta": 90,
   "cameraPhi": 0,
   "imageSize": 1000,
-  "fovSize": 15000,
+  "fovSize": 75000,
   "layerDist": 3,
   "layers": 1,
   "concurrency": 200,
   "floatPrec": 100,
   "heatmapFile": "./heatmaps/wikipedia.png",
-  "outputFile": "./outputs/57-43-5.png",
-  "exposure": 2.5,
-  "n": 57,
-  "l": 43,
-  "m": 5
+  "outputFile": "./outputs/188-18-8-low-prec.png",
+  "exposure": 4.5,
+  "n": 188,
+  "l": 18,
+  "m": 8
 }
