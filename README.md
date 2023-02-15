@@ -7,3 +7,4 @@
 * `hydrogen-radial`: computes the arbitrary precision closed-form formula for the radial wavefunction of hydrogen atom.
 * `spherical-harmonics`: computes the arbitrary precision closed-form formula for the spherical harmonics.
 * `render-hydrogen`: renders hydrogen electron probability density with arbitrary precision computation.
+* `spherical-bessel`: computes the arbitrary precision closed-form formula for the spherical bessel functions.
