@@ -8,3 +8,4 @@
 * `spherical-harmonics`: computes the arbitrary precision closed-form formula for the spherical harmonics.
 * `render-hydrogen`: renders hydrogen electron probability density with arbitrary precision computation.
 * `spherical-bessel`: computes the arbitrary precision closed-form formula for the spherical bessel functions.
+* `resonance-scattering`: plots the resonance scattering for the partial waves of constant spherical well potential, this reproduces Figure 6.15, and allows to plot with different parameter values.
