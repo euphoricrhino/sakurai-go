@@ -12,6 +12,7 @@ import (
 /*
 	example runs
 
+octave --persist `go run *.go --l=3 --x-start=1.3 --x-step=.001 -x-limit=1.5 --gamma=5.5`
 octave --persist `go run *.go --l=9 --x-start=6.0 --x-step=.001 -x-limit=8 --gamma=10.5 --prec=2000`
 octave --persist `go run *.go --l=12 --x-start=8.0 --x-step=.001 -x-limit=10 --gamma=12.75 --prec=2000`
 octave --persist `go run *.go --l=23 --x-start=18 --x-step=.001 -x-limit=19 --gamma=20.5 --prec=2000`
