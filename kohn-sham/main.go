@@ -116,8 +116,9 @@ const (
 )
 
 func epsilonC(nVal float64) float64 {
-	rs := math.Pow(4.0*math.Pi/3.0*nVal, -1.0/3.0)
-	return epsilonCA / (1.0 + epsilonCB*math.Sqrt(rs) + epsilonCC*rs)
+	y := math.Pow(4.0*math.Pi*nVal/3.0, 1.0/6.0)
+	y2 := y * y
+	return epsilonCA * y2 / (y2 + epsilonCB*y + epsilonCC)
 }
 
 func derEpsilonXC(nVal float64) float64 {
