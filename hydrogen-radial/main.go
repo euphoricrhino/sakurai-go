@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"math/big"
 
-	"modern.qm/go/util"
+	"github.com/euphoricrhino/sakurai-go/util"
 )
 
 func main() {
